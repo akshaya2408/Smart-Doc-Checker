@@ -1,0 +1,203 @@
+/* styles.css - global styles for the Doc Checker frontend */
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body,#root { height: 100%; font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif; }
+
+/* Page background */
+body {
+  background: linear-gradient(135deg, #f4f7fb 0%, #e9eef8 50%, #f7fbff 100%);
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px;
+}
+
+/* Center card container */
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(20, 33, 61, 0.08);
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(16,24,40,0.04);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.logo {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg,#4f46e5,#06b6d4);
+  border-radius: 10px;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:20px;
+  box-shadow: 0 6px 18px rgba(79,70,229,0.14);
+}
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.subtitle {
+  font-size: 13px;
+  color: #475569;
+  margin-top: 4px;
+}
+
+/* Grid layout for form and report */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Mobile */
+@media (max-width: 880px) {
+  .main-grid { grid-template-columns: 1fr; }
+}
+
+/* Upload card */
+.card {
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(15,23,42,0.03);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.03);
+}
+
+/* File input */
+.file-input {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.file-input input[type="file"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  background: #fbfdff;
+  cursor: pointer;
+}
+.file-hint {
+  font-size: 13px; color: #64748b;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg,#4f46e5,#06b6d4);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(6,182,212,0.12);
+}
+.btn:active { transform: translateY(1px); }
+
+/* Secondary button */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid #e6eefb;
+  color: #0f172a;
+  padding: 9px 12px;
+  border-radius: 8px;
+}
+
+/* Small stats (right column) */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stat {
+  background: linear-gradient(180deg,#ffffff,#fbfdff);
+  border-radius: 10px;
+  padding: 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border:1px solid rgba(15,23,42,0.03);
+}
+.stat .value { font-weight:700; font-size:18px; color:#0f172a; }
+.stat .label { font-size:12px; color:#64748b; }
+
+/* Report area */
+.report {
+  margin-top: 14px;
+}
+.report h3 { font-size: 16px; color: #0f172a; margin-bottom: 8px; }
+
+/* Conflict list */
+.conflict-list { list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 8px; }
+.conflict {
+  background: linear-gradient(90deg,#fff7f5,#fff);
+  border-left: 4px solid #ef4444;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #7f1d1d;
+  font-weight: 600;
+}
+.no-conflicts {
+  padding: 12px; border-radius: 8px; background: #ecfdf5; color: #065f46; font-weight: 600;
+}
+
+/* External update box */
+.external-update {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f0f9ff;
+  color: #0369a1;
+  font-size: 13px;
+}
+
+/* Download link */
+.download {
+  display:inline-block;
+  margin-top: 12px;
+  text-decoration:none;
+  background:#10b981;
+  color:#fff;
+  padding:10px 12px;
+  border-radius:8px;
+  font-weight:600;
+}
+
+/* Small helper / tips text */
+.helper {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+/* File-selected tags */
+.selected-files {
+  margin-top: 10px;
+  display:flex;
+  gap:8px; flex-wrap:wrap;
+}
+.file-pill {
+  background:#eef2ff; color:#4338ca; padding:6px 8px; border-radius:999px; font-weight:600; font-size:13px;
+  border:1px solid rgba(67,56,202,0.06);
+}
+
+/* Footer small */
+.footer {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: center;
+}

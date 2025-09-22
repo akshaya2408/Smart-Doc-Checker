@@ -1,0 +1,19 @@
+/* index.css */
+
+/* Browser reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* optional global background, but we’ll let styles.css handle UI look */
+body {
+  background-color: #f4f7fb;
+  color: #1f2937;
+}
